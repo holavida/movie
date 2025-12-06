@@ -11,9 +11,9 @@ id_pattern = re.compile(r'^.\d+$')
 
 # Bot information
 SESSION = environ.get('SESSION', 'TechVJBot')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', "")
+API_ID = int(environ.get('API_ID', '18693993'))
+API_HASH = environ.get('API_HASH', '382ee6b53bdd0df66a52ea9779c62424')
+BOT_TOKEN = environ.get('BOT_TOKEN', "8495945777:AAEsV2zv4ukFuK2kMv-meTw03IaYE8449tI")
 
 
 # This Pictures Is For Start Message Picture, You Can Add Multiple By Giving One Space Between Each.
@@ -21,15 +21,15 @@ PICS = (environ.get('PICS', 'https://graph.org/file/ce1723991756e48c35aa1.jpg'))
 
 
 # Admins & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()] # For Multiple Id Use One Space Between Each.
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5338241603').split()] # For Multiple Id Use One Space Between Each.
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]  # For Multiple Id Use One Space Between Each.
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # This Channel Is For When User Start Your Bot Then Bot Send That User Name And Id In This Log Channel, Same For Group Also.
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003458471347'))
 
 # This Is File Channel Where You Upload Your File Then Bot Automatically Save It In Database 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]  # For Multiple Id Use One Space Between Each.
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1003444335848').split()]  # For Multiple Id Use One Space Between Each.
 
 # auth_channel means force subscribe channel.
 # if REQUEST_TO_JOIN_MODE is true then force subscribe work like request to join fsub, else if false then work like normal fsub.
@@ -59,9 +59,9 @@ DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in enviro
 
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "")   # IF Multiple Database Is False Then Fill Only This Database Url.
-DATABASE_NAME = environ.get('DATABASE_NAME', "techvjclonefilterbot")
-COLLECTION_NAME = environ.get('COLLECTION_NAME', 'vjcollection')
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://acostayanaisis_db_user:55150233Carlos10$@cluster0.3qbyezw.mongodb.net/?appName=Cluster0")   # IF Multiple Database Is False Then Fill Only This Database Url.
+DATABASE_NAME = environ.get('DATABASE_NAME', "superclouddownloaders")
+COLLECTION_NAME = environ.get('COLLECTION_NAME', 'filescollection')
 
 MULTIPLE_DATABASE = bool(environ.get('MULTIPLE_DATABASE', False)) # Set True or False
 
@@ -72,7 +72,7 @@ S_DB_URI = environ.get('S_DB_URI', "")   # This Db is for File Data Store When F
 
 
 # Premium And Referal Settings
-PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', True)) # Set Ture Or False
+PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', False)) # Set Ture Or False
 
 # If PREMIUM_AND_REFERAL_MODE is True Then Fill Below Variable, If Flase Then No Need To Fill.
 REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '20')) # number of referal count
@@ -93,22 +93,22 @@ CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/vj_bots')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'vj_bot_disscussion') # Support Chat Link Without https:// or @
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/kingvj01')
 
-# True Or False
-AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))
-PM_SEARCH = bool(environ.get('PM_SEARCH', True))
-BUTTON_MODE = bool(environ.get('BUTTON_MODE', True))
-MAX_BTN = bool(environ.get('MAX_BTN', True))
+# True Or False - FUNCIONES ACTIVADAS
+AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))  # Corrector ortográfico IA
+PM_SEARCH = bool(environ.get('PM_SEARCH', True))  # Búsqueda en privado
+BUTTON_MODE = bool(environ.get('BUTTON_MODE', True))  # Modo botones
+MAX_BTN = bool(environ.get('MAX_BTN', True))  # Máximos botones
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
-IMDB = bool(environ.get('IMDB', False))
-AUTO_FFILTER = bool(environ.get('AUTO_FFILTER', True))
-AUTO_DELETE = bool(environ.get('AUTO_DELETE', True))
-LONG_IMDB_DESCRIPTION = bool(environ.get("LONG_IMDB_DESCRIPTION", False))
-SPELL_CHECK_REPLY = bool(environ.get("SPELL_CHECK_REPLY", True))
-MELCOW_NEW_USERS = bool(environ.get('MELCOW_NEW_USERS', True))
-PROTECT_CONTENT = bool(environ.get('PROTECT_CONTENT', False))
+IMDB = bool(environ.get('IMDB', True))  # IMDB ACTIVADO
+AUTO_FFILTER = bool(environ.get('AUTO_FFILTER', True))  # Auto filtro
+AUTO_DELETE = bool(environ.get('AUTO_DELETE', True))  # Auto eliminar mensajes
+LONG_IMDB_DESCRIPTION = bool(environ.get("LONG_IMDB_DESCRIPTION", True))  # Descripción larga IMDB
+SPELL_CHECK_REPLY = bool(environ.get("SPELL_CHECK_REPLY", True))  # Corrector ortográfico
+MELCOW_NEW_USERS = bool(environ.get('MELCOW_NEW_USERS', True))  # Bienvenida nuevos usuarios
+PROTECT_CONTENT = bool(environ.get('PROTECT_CONTENT', False))  # Proteger contenido
 PUBLIC_FILE_STORE = bool(environ.get('PUBLIC_FILE_STORE', True))
-NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
-USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
+NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", True))  # Mensaje sin resultados
+USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))  # Filtro por caption
 
 
 # Token Verification Info :
@@ -133,20 +133,65 @@ TUTORIAL = environ.get('TUTORIAL', '') # How Open Shortner Link Video Link , Cha
 
 # Others
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
-MAX_B_TN = environ.get("MAX_B_TN", "5")
+MAX_B_TN = environ.get("MAX_B_TN", "8")  # Más botones por página
 PORT = environ.get("PORT", "8080")
-MSG_ALRT = environ.get('MSG_ALRT', 'Hello My Dear Friends ❤️')
-CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", f"{script.CAPTION}")
-BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", CUSTOM_FILE_CAPTION)
-IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", f"{script.IMDB_TEMPLATE_TXT}")
+MSG_ALRT = environ.get('MSG_ALRT', '🎬 Super Cloud Downloaders ❤️')
+
+CUSTOM_FILE_CAPTION = environ.get("CUSTOM_FILE_CAPTION", """
+<b>📁 {file_name}</b>
+
+┌──────────────────────
+├ 📦 <b>Tamaño:</b> <code>{file_size}</code>
+├ 🎬 <b>Duración:</b> <code>{duration}</code>
+├ 📺 <b>Calidad:</b> <code>{quality}</code>
+├ 🔊 <b>Audio:</b> <code>{audio}</code>
+└──────────────────────
+
+<b>⚡ @Super_Cloud_Downloaders</b>
+""")
+
+BATCH_FILE_CAPTION = environ.get("BATCH_FILE_CAPTION", """
+<b>📁 {file_name}</b>
+
+┌──────────────────────
+├ 📦 <b>Tamaño:</b> <code>{file_size}</code>
+├ 🎬 <b>Duración:</b> <code>{duration}</code>
+└──────────────────────
+
+<b>⚡ @Super_Cloud_Downloaders</b>
+""")
+
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 
 
+# IMDB TEMPLATE MEJORADO CON POSTER, RATING, AÑO, GÉNERO, ETC.
+IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", """<a href="{poster}">&#8203;</a><b>🎬 {title}</b>
+
+┌──────────────────────
+├ 📅 <b>Año:</b> {year}
+├ ⭐ <b>Rating:</b> {rating}/10
+├ 🎭 <b>Géneros:</b> {genres}
+├ ⏱️ <b>Duración:</b> {runtime}
+├ 🌍 <b>País:</b> {country}
+├ 🗣️ <b>Idioma:</b> {languages}
+├──────────────────────
+├ 🎬 <b>Director:</b> {director}
+├ ✍️ <b>Escritor:</b> {writer}
+├ 🌟 <b>Actores:</b> {cast}
+└──────────────────────
+
+📖 <b>Sinopsis:</b>
+<i>{plot}</i>
+
+🔍 <b>Selecciona tu archivo abajo 👇</b>
+""")
+
+
 # Choose Option Settings 
-LANGUAGES = ["malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan"]
-SEASONS = ["season 1", "season 2", "season 3", "season 4", "season 5", "season 6", "season 7", "season 8", "season 9", "season 10"]
+LANGUAGES = ["spanish", "spa", "español", "latino", "castellano", "malayalam", "mal", "tamil", "tam" ,"english", "eng", "hindi", "hin", "telugu", "tel", "kannada", "kan", "dual", "multi"]
+SEASONS = ["season 1", "season 2", "season 3", "season 4", "season 5", "season 6", "season 7", "season 8", "season 9", "season 10", "temporada 1", "temporada 2", "temporada 3", "temporada 4", "temporada 5"]
 EPISODES = ["E01", "E02", "E03", "E04", "E05", "E06", "E07", "E08", "E09", "E10", "E11", "E12", "E13", "E14", "E15", "E16", "E17", "E18", "E19", "E20", "E21", "E22", "E23", "E24", "E25", "E26", "E27", "E28", "E29", "E30", "E31", "E32", "E33", "E34", "E35", "E36", "E37", "E38", "E39", "E40"]
-QUALITIES = ["360p", "480p", "720p", "1080p", "1440p", "2160p"]
+QUALITIES = ["360p", "480p", "720p", "1080p", "1440p", "2160p", "4K", "HDRip", "WEBRip", "BluRay", "HDTV"]
 YEARS = ["1900", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021", "2022", "2023", "2024", "2025"]
 
 
@@ -196,4 +241,3 @@ else:
 # Don't Remove Credit @VJ_Bots
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
-
